@@ -428,7 +428,8 @@ body {
   text-align: center;
 }
 .carousel-indicators li {
-  background-color: #eeeeee;
+  background-color: #777777;
+  border-color: #eeeeee;
 }
 .carousel-indicators .active {
   background-color: #333333;
