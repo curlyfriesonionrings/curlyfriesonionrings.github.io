@@ -437,3 +437,26 @@ body {
 .carousel-indicators {
   bottom: -50px;
 }
+@font-face {
+  font-family: 'paalit';
+  src: url('../vendor/paalit/fonts/paalit.eot');
+  src: url('../vendor/paalit/fonts/paalit.eot?#iefix') format('embedded-opentype'), url('../vendor/paalit/fonts/paalit.ttf') format('truetype'), url('../vendor/paalit/fonts/paalit.woff') format('woff'), url('../vendor/paalit/fonts/paalit.svg#paalit') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+paalit-i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'paalit' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.paalit-users-cycle:before {
+  content: "\e900";
+}

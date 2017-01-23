@@ -63,5 +63,5 @@
     
     // Set up carousel
     $('#carousel').carousel({wrap: true, interval: false});
-
+    
 })(jQuery); // End of use strict
