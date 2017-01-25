@@ -71,6 +71,10 @@ aside {
     padding: 0;
 }
 
+.footer {
+    font-size: 12px;
+}
+
 // Navigation
 
 .navbar-default {
@@ -301,6 +305,20 @@ header {
     }
 }
 
+.content-section-b {
+    padding: 50px 0;
+    border-top: 1px solid @b-border;
+    border-bottom: 1px solid @b-border;
+    background: @b-background;
+}
+
+.network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
 // Bootstrap Overrides
 .text-primary {
     color: @theme-primary;
@@ -360,14 +378,11 @@ body {
     webkit-tap-highlight-color: @gray-darker;
 }
 
-// Carousel
-.carousel.slide img {
-    width:100%;
-    height:auto;
-}
-
-.carousel-control.left, .carousel-control.right {
-    background: none;
+.vertical-align {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    text-align: center;
 }
 
 .carousel-row {
@@ -375,26 +390,7 @@ body {
     flex-direction: row;
 }
 
-.carousel-text-center{
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    text-align: center;
-}
-
-.carousel-indicators li {
-    background-color: @gray-light;
-    border-color: @gray-lighter;
-}
-
-.carousel-indicators .active {
-    background-color: @gray-dark;
-}
-
-.carousel-indicators {
-    bottom:-50px;
-}
-
+// Custom Font
 @font-face {
   font-family: 'paalit';
   src:  url('../vendor/paalit/fonts/paalit.eot');
@@ -423,4 +419,34 @@ paalit-i {
 
 .paalit-users-cycle:before {
   content: "\e900";
+}
+
+// Carousel
+.carousel.slide img {
+    width:100%;
+    height:auto;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background: none;
+}
+
+.carousel-text-center{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    background-color: @gray-light;
+    border-color: @gray-lighter;
+}
+
+.carousel-indicators .active {
+    background-color: @gray-dark;
+}
+
+.carousel-indicators {
+    bottom:-50px;
 }
