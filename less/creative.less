@@ -71,10 +71,6 @@ aside {
     padding: 0;
 }
 
-.footer {
-    font-size: 12px;
-}
-
 // Navigation
 
 .navbar-default {
@@ -127,16 +123,20 @@ aside {
         border-color: fade(white, 30%);
         .navbar-header .navbar-brand {
             color: fade(white, 70%);
+//            color: fade(@gray-darker, 70%);
             &:hover,
             &:focus {
                 color: white;
+//                color: @gray-dark;
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
             color: fade(white, 70%);
+//            color: fade(@gray-darker, 70%);
             &:hover {
                 color: white;
+//                color: @gray-dark;
             }
         }
         &.affix {
@@ -169,9 +169,10 @@ header {
     min-height: auto;
     .background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/landing-page-background-gr_1900x765.png');
     text-align: center;
     color: white;
+//    color: black;
     .header-content {
         position: relative;
         text-align: center;
@@ -191,6 +192,7 @@ header {
             p {
                 font-weight: 300;
                 color: fade(white, 70%);
+//                color: fade(@gray-light, 70%);
                 font-size: 16px;
                 margin-bottom: 50px;
             }
@@ -264,6 +266,16 @@ header {
 #solution a.deco-none {
     color:white !important;
     text-decoration:none;
+}
+
+.footer {
+    text-align: center;
+    h3 {
+        padding: 10px 0;
+    }
+    p {
+        font-size: 12px;
+    }
 }
 
 // Bootstrap Overrides

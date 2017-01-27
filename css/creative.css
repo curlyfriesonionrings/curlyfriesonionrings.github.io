@@ -56,9 +56,6 @@ aside {
 .no-padding {
   padding: 0;
 }
-.footer {
-  font-size: 12px;
-}
 .navbar-default {
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);
@@ -153,7 +150,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../img/header.jpg');
+  background-image: url('../img/landing-page-background-gr_1900x765.png');
   text-align: center;
   color: white;
 }
@@ -240,6 +237,15 @@ header .header-content .header-content-inner p {
 #solution a.deco-none {
   color: white !important;
   text-decoration: none;
+}
+.footer {
+  text-align: center;
+}
+.footer h3 {
+  padding: 10px 0;
+}
+.footer p {
+  font-size: 12px;
 }
 .text-primary {
   color: #2c89d0;
