@@ -60,7 +60,9 @@ p {
 }
 
 section {
-    padding: 100px 0;
+    padding: 50px 0;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 aside {
@@ -190,7 +192,7 @@ header {
                 margin: 30px auto;
             }
             p {
-                font-weight: 300;
+                font-weight: 500;
                 color: fade(white, 70%);
 //                color: fade(@gray-light, 70%);
                 font-size: 16px;
@@ -231,6 +233,15 @@ header {
     margin-top: 0;
 }
 
+.content-section-b {
+    padding: 50px 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-top: 1px solid @b-border;
+    border-bottom: 1px solid @b-border;
+    background: @b-background;
+}
+
 .service-box {
     max-width: 400px;
     min-width: 400px;
@@ -249,13 +260,6 @@ header {
     }
 }
 
-.content-section-b {
-    padding: 50px 0;
-    border-top: 1px solid @b-border;
-    border-bottom: 1px solid @b-border;
-    background: @b-background;
-}
-
 .network-name {
     text-transform: uppercase;
     font-size: 14px;
@@ -266,6 +270,11 @@ header {
 #solution a.deco-none {
     color:white !important;
     text-decoration:none;
+}
+
+.optimize-box {
+    display: inline-block;
+    position: relative;
 }
 
 .footer {
@@ -344,6 +353,12 @@ body {
     text-align: center;
 }
 
+.vertical-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .carousel-row {
     display: flex;
     flex-direction: row;
@@ -351,6 +366,10 @@ body {
 
 .social-icon {
     padding: 5px;
+}
+
+.sub-divider {
+    padding-bottom: 10px;
 }
 
 // Custom Font
