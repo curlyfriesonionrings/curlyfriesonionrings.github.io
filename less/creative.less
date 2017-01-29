@@ -67,6 +67,9 @@ section {
 
 aside {
     padding: 50px 0;
+    .clear {
+        padding-top: 20px;
+    }
 }
 
 .no-padding {
@@ -75,25 +78,118 @@ aside {
 
 // Navigation
 
+//.navbar-default {
+//    background-color: white;
+//    background: @theme-primary;
+//    border-color: fade(white, 30%);
+//    height: 60px;
+//    .sans-serif-font;
+//    .transition-all;
+//    .navbar-header .navbar-brand {
+//        color: @theme-contrast;
+//        .sans-serif-font;
+//        font-weight: 700;
+//        height: 60px;
+//        line-height: 30px;
+//        text-transform: uppercase;
+//        &:hover,
+//        &:focus {
+//            color: white;
+//        }
+//    }
+//    .navbar-header .navbar-toggle {
+//        font-weight: 700;
+//        font-size: 12px;
+//        color: white;
+//        text-transform: uppercase;
+//        &:hover {
+//            background-color: @periwinkle-gray;
+//        }
+//    }
+//    .nav {
+//        > li {
+//            > a,
+//            > a:focus {
+//                text-transform: uppercase;
+//                font-weight: 700;
+//                font-size: 14px;
+//                color: fade(white, 70%);
+//                background-color: @theme-primary;
+//                &:hover {
+//                    color: white;
+//                    background-color: @polo-blue;
+//                }
+//            }
+//            &.active {
+//                > a,
+//                > a:focus {
+//                    color: white !important;
+//                    background-color: @theme-primary;
+//                    &:hover {
+//                        background-color: @periwinkle-gray;
+//                    }
+//                }
+//            }
+//        }
+//    }
+//    @media (min-width: 768px) {
+//        background-color: transparent;
+//        border-color: fade(white, 30%);
+//        .navbar-header .navbar-brand {
+//            color: fade(white, 70%);
+//            &:hover,
+//            &:focus {
+//                color: white;
+//            }
+//        }
+//        .nav > li > a,
+//        .nav > li > a:focus {
+//            color: fade(white, 70%);
+//            &:hover {
+//                color: white;
+//            }
+//        }
+//        &.affix {
+//            background-color: @theme-primary;
+//            border-color: fade(white, 30%);
+//            .navbar-header .navbar-brand {
+//                color: @theme-contrast;
+//                font-size: 14px;
+//                &:hover,
+//                &:focus {
+//                    color: white;
+//                }
+//            }
+//            .nav > li > a,
+//            .nav > li > a:focus {
+//                color: fade(white, 70%);
+//                background-color: @theme-primary;
+//                &:hover {
+//                    color: white;
+//                }
+//            }
+//        }
+//    }
+//}
 .navbar-default {
-    background-color: white;
-    border-color: fade(@gray-darker, 5%);
+    background-color: @theme-primary;
+    border-color: @gray-light;
     .sans-serif-font;
     .transition-all;
     .navbar-header .navbar-brand {
-        color: @theme-primary;
+        color: @theme-contrast;
         .sans-serif-font;
         font-weight: 700;
         text-transform: uppercase;
         &:hover,
         &:focus {
-            color: darken(@theme-primary, 10%);
+            color: white;
         }
     }
     .navbar-header .navbar-toggle {
         font-weight: 700;
         font-size: 12px;
-        color: @gray-darker;
+        color: @gray-lighter;
         text-transform: uppercase;
     }
     .nav {
@@ -103,15 +199,15 @@ aside {
                 text-transform: uppercase;
                 font-weight: 700;
                 font-size: 13px;
-                color: @gray-darker;
+                color: fade(white, 70%);
                 &:hover {
-                    color: @theme-primary;
+                    color: white;
                 }
             }
             &.active {
                 > a,
                 > a:focus {
-                    color: @theme-primary !important;
+                    color: white !important;
                     background-color: transparent;
                     &:hover {
                         background-color: transparent;
@@ -125,38 +221,34 @@ aside {
         border-color: fade(white, 30%);
         .navbar-header .navbar-brand {
             color: fade(white, 70%);
-//            color: fade(@gray-darker, 70%);
             &:hover,
             &:focus {
                 color: white;
-//                color: @gray-dark;
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
             color: fade(white, 70%);
-//            color: fade(@gray-darker, 70%);
             &:hover {
                 color: white;
-//                color: @gray-dark;
             }
         }
         &.affix {
-            background-color: white;
-            border-color: fade(@gray-darker, 5%);
+            background-color: @theme-primary;
+            border-color: @gray-light;
             .navbar-header .navbar-brand {
-                color: @theme-primary;
+                color: @theme-contrast;
                 font-size: 14px;
                 &:hover,
                 &:focus {
-                    color: darken(@theme-primary, 10%);
+                    color: white;
                 }
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: @gray-darker;
+                color: fade(white, 70%);
                 &:hover {
-                    color: @theme-primary;
+                    color: white;
                 }
             }
         }
@@ -171,10 +263,9 @@ header {
     min-height: auto;
     .background-cover;
     background-position: center;
-    background-image: url('../img/landing-page-background-gr_1900x765.png');
+    background-image: url('../img/landing-page-background-crop.jpg');
     text-align: center;
     color: white;
-//    color: black;
     .header-content {
         position: relative;
         text-align: center;
@@ -193,8 +284,7 @@ header {
             }
             p {
                 font-weight: 500;
-                color: fade(white, 70%);
-//                color: fade(@gray-light, 70%);
+                color: fade(white, 80%);
                 font-size: 16px;
                 margin-bottom: 50px;
             }
@@ -231,6 +321,13 @@ header {
 
 .section-heading {
     margin-top: 0;
+}
+
+#solution {
+    h4 {
+        color: @theme-contrast;
+        font-weight: 600;
+    }
 }
 
 .content-section-b {
@@ -275,16 +372,6 @@ header {
 .optimize-box {
     display: inline-block;
     position: relative;
-}
-
-.footer {
-    text-align: center;
-    h3 {
-        padding: 10px 0;
-    }
-    p {
-        font-size: 12px;
-    }
 }
 
 // Bootstrap Overrides
@@ -366,6 +453,10 @@ body {
 
 .social-icon {
     padding: 5px;
+}
+
+.header-icon {
+    padding: 10px;
 }
 
 .sub-divider {
