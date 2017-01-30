@@ -9,7 +9,7 @@
     <meta name="description" content="Paalit landing page">
     <meta name="author" content="Paalit">
 
-    <title>Paalit - Landing Page</title>
+    <title>Paalit</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/paalit.min.css" rel="stylesheet">
 
     <!-- MailChimp Form Embed -->
 <!--    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">-->
@@ -35,6 +35,21 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- Google Analytics -->
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-91081034-1', 'auto');
+
+        // Replace the following lines with the plugins you want to use.
+        ga('require', 'eventTracker');
+        ga('require', 'outboundLinkTracker');
+        ga('require', 'urlChangeTracker');
+        // ...
+
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <script async src='js/autotrack.js'></script>
 </head>
 
 <body id="page-top">
@@ -80,9 +95,66 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Reach More Patients Through Group Programs</h1>
+                <h1 id="homeHeading">Four Steps To Grow Your Patient Population</h1>
+<!--
                 <hr>
-                <p>Many mental health patients are unaware that group programs exists or do not know where to go to find them. Paalit’s GROUP solution enables mental health practitioners to make group programs more accessible to the patient and medical community.</p>
+                <p>Many mental health patients are unaware that group programs exist or do not know where to go to find them. Paalit’s GROUP solution enables mental health practitioners to make group programs more accessible to the patient and medical community.</p>
+-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <hr>
+                            <div class="row text-center">
+                                <div class="col-md-3">
+                                    <a href="#organize" class="page-scroll deco-none">
+                                        <span class="fa-stack fa-4x">
+                                            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+<!--                                            <i class="fa fa-address-card-o fa-stack-1x text-primary"></i>-->
+                                            <i class="fa fa-address-card-o fa-stack-1x icon-color"></i>
+                                        </span>
+                                        <h4>Organize</h4>
+                                        <p class="text-faded">Intuitively categorize group programs so people can easily find what they need</p>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#differentiate" class="page-scroll deco-none">
+                                        <span class="fa-stack fa-4x">
+                                            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+<!--                                            <i class="fa fa-group fa-stack-1x text-primary"></i>-->
+                                            <i class="fa fa-group fa-stack-1x icon-color"></i>
+                                        </span>
+                                        <h4>Differentiate</h4>
+                                        <p class="text-faded">Establish credibility quickly with those seeking the services you provide</p>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#engage" class="page-scroll deco-none">
+                                        <span class="fa-stack fa-4x">
+                                            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+        <!--                                    <paalit-i class="fa paalit-users-cycle fa-stack-1x text-primary"></i>-->
+<!--                                            <i class="fa fa-share fa-stack-1x text-primary"></i>-->
+                                            <i class="fa fa-share fa-stack-1x icon-color"></i>
+                                        </span>
+                                        <h4>Engage</h4>
+                                        <p class="text-faded">Keep your network of patients and partners abreast of new developments</p>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#optimize" class="page-scroll deco-none">
+                                        <span class="fa-stack fa-4x">
+                                            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+<!--                                            <i class="fa fa-user-circle-o fa-stack-1x text-primary"></i>-->
+                                            <i class="fa fa-user-circle-o fa-stack-1x icon-color"></i>
+                                        </span>
+                                        <h4>Optimize</h4>
+                                        <p class="text-faded">Get discovered faster through targeted advertising and search engine optimization</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
                 <a href="#solution" class="btn btn-primary btn-xl page-scroll">Discover How</a>
             </div>
         </div>
@@ -147,8 +219,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <h2 class="section-heading"><i class="fa fa-address-card-o header-icon"></i> Organize</h2>
-                    <p class="text-muted">Group programs such as workshops, support groups, and group therapies, are difficult to find and are often tucked away in websites and flyers. Our <em>Event Builder</em> allows you to organize group programs in a way that is discoverable, understandable, and transactable.</p>
+                    <h2 class="section-heading"><i class="fa fa-address-card-o header-icon"></i>Get Organized</h2>
+                    <p class="text-muted">Today, group programs are difficult to find and are often tucked away in websites and flyers. Information contained in these sources is incomplete and not patient-friendly.</p>
                     <hr class="primary">
                 </div>
             </div>
@@ -157,15 +229,15 @@
                     <img class="img-responsive vertical-align" src="img/event.jpg" alt="organize-offering"/>
                 </div>
                 <div class="col-xs-6 vertical-align">
-                    <h3>Outreach</h3>
-                    <p class="text-muted">Post group programs online in an intuitive and engaging manner. Communicating program objectives, setting the right expectations, and being transparent about the program format and facilitator style can alleviate anxiety associated with selecting the right group program.</p>
+                    <h3>Manage Your Group Programs Online</h3>
+                    <p class="text-muted">Group Programs such as workshops, support groups, and group therapies are excellent ways to serve more people in the same amount of time. Being transparent with client expectations and making sign ups easy increases the likelihood of a purchase.</p>
                 </div>
             </div>
             <hr class="primary sub-divider">
             <div class="carousel-row">
                 <div class="col-xs-6 vertical-align">
-                    <h3>Categorize</h3>
-                    <p class="text-muted">Assign appropriate lifestyle and topic tags to make the browsing experience enjoyable and relevant for prospective patients in their search.</p>
+                    <h3>Create A Friendly Browsing Experience</h3>
+                    <p class="text-muted">Many sources for finding behavioral health services use complex psychological lingo. Assigning the appropriate lifestyle and topic tags make the browsing experience easy and understandable for a prospective patient in search of a fitting program.</p>
                 </div>
                 <div class="col-xs-6">
                     <img class="center-block img-responsive" src="img/browse.jpg" alt="organize-offering"/>
@@ -178,8 +250,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <h2 class="section-heading"><i class="fa fa-group header-icon"></i>Differentiate</h2>
-                    <p class="text-muted">Patients often struggle to determine who the right professional is for them. Our <em>Profile Builder</em> enables you to share information about your expertise, experience, style, and space to build patient confidence.</p>
+                    <h2 class="section-heading"><i class="fa fa-group header-icon"></i>Forge Trust</h2>
+                    <p class="text-muted">Much of the behavioral health space relies on the patient’s trust, and credibility, of the professional. If a prospective patient does not feel like a specialist is trustworthy or qualified, the patient is more likely to abandon the search.</p>
                     <hr class="primary">
                 </div>
             </div>
@@ -188,8 +260,8 @@
                     <img class="center-block img-responsive" src="img/specialist_browser.jpg" alt="organize-profile"/>
                 </div>
                 <div class="col-sm-6 vertical-align">
-                    <h3>Forging Trust</h3>
-                    <p class="text-muted">Set up your profile to build trust and confidence in your capabilities. Showcase your experience, expertise, and thought leadership.</p>
+                    <h3>Show, Not Just Tell</h3>
+                    <p class="text-muted">Showing prospective clients the type of person you are and what your space looks builds your capability for trust. Your prior experiences help demonstrate your expertise, equipping your patients with the ability to make the right decisions.</p>
                 </div>
           </div>
         </div>
@@ -199,15 +271,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <h2 class="section-heading"><i class="fa fa-share header-icon"></i>Engage</h2>
-                    <p class="text-muted">It can be challenging to keep your patients, peer network, and partners up-to-date with recent developments. Our site integration and social sharing capabilities allow you to instantaneously publish group programs throughout various digital channels.</p>
+                    <h2 class="section-heading"><i class="fa fa-share header-icon"></i>Stay Connected</h2>
+                    <p class="text-muted">Your network of patients, peers, and partners will not know of your new developments unless they invest the effort to check. Make it easier to keep them informed by publishing your content to your network.</p>
                     <hr class="primary">
                 </div>
             </div>
             <div class="carousel-row">
                 <div class="col-xs-6 vertical-align">
-                    <h3>Outreach</h3>
-                    <p class="text-muted">Post group programs online in an intuitive and engaging manner. Communicating program objectives, setting the right expectations, and being transparent about the program format and facilitator style can alleviate anxiety associated with selecting the right group program.</p>
+                    <h3>Keep Your Site Up-To-Date</h3>
+                    <p class="text-muted">Your site regulars don’t need to resort to a new source for information. Our platform connects with your website and automatically updates with new programs or program changes.</p>
                 </div>
                 <div class="col-xs-6">
                     <img class="img-responsive vertical-align" src="img/activate_browser_shadow.jpg" alt="powered-screenshot"/>
@@ -221,7 +293,7 @@
                     <i class="fa fa-twitter-square fa-4x social-icon"></i>
                     <i class="fa fa-envelope-square fa-4x social-icon"></i>
                     <h3>Spread the News</h3>
-                    <p class="text-muted">Share blogs, programs, and resource recommendations seamlessly through Facebook, LinkedIn, Twitter, and email.</p>
+                    <p class="text-muted">Sharing your knowledge and your growing skillset helps establish your credibility and is a step towards being viewed as a thought leader. Share blogs, programs, and resource recommendations seamlessly through Facebook, LinkedIn, Twitter, and email.</p>
                 </div>
                 
             </div>
@@ -262,8 +334,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <h2 class="section-heading"><i class="fa fa-user-circle-o header-icon"></i>Optimize</h2>
-                    <p class="text-muted">Targeted advertising and search engine optimization can improve greatly discoverability. Our digital marketing partners can help improve your outreach through digital channels.</p>
+                    <h2 class="section-heading"><i class="fa fa-user-circle-o header-icon"></i>Better Outreach</h2>
+                    <p class="text-muted">Efforts commonly used today in the behavioral health space to raise awareness and extend reach are inefficient. Flyers and free talks do not yield information that can be used to improve in outreach attempts.</p>
                     <hr class="primary">
                 </div>
             </div>
@@ -288,8 +360,7 @@
                 </div>
             </div>
             <div class="row text-center">
-                <h4>Facebook advertising is a cost-effective way to create program awareness with key demographics.</h4>
-                <h4>Google ads can help guide those who don't know exactly what they are looking for to the right resources.</h4>
+                <p>Draw people to you and your services with targeted ads on digital platforms. Our digital marketing partners can help make it easier for people to find you if they don't know what they are looking for.</p>
             </div>
         </div>
     </section>
@@ -333,14 +404,12 @@
             <hr class="primary">
             <div class="row">
                 <div class="col-xs-4 col-xs-offset-2 text-center">
-                    <img src="http://placehold.it/100x100" alt="sandeep-luke"/>
                     <a href="https://www.linkedin.com/in/sandeepluke"><h5>Sandeep Luke</h5></a>
                     <h6 class="text-muted">Co-Founder & CEO</h6>
                     <a href="mailto:sandeep.luke@paalit.com"><i class="fa fa-envelope-o fa-2x sr-contact"></i></a>
                 </div>
 
                 <div class="col-xs-4 text-center">
-                    <img src="http://placehold.it/100x100" alt="nathan-fu"/>
                     <a href="https://www.linkedin.com/in/nathan-fu-44752013"><h5>Nathan Fu</h5></a>
                     <h6 class="text-muted">Co-Founder & CTO</h6>
                     <a href="mailto:nathan.fu@paalit.com"><i class="fa fa-envelope-o fa-2x sr-contact"></i></a>
@@ -373,7 +442,7 @@
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/creative.min.js"></script>
+    <script src="js/paalit.min.js"></script>
 
 </body>
 
