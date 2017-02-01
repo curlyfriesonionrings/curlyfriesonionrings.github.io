@@ -35,16 +35,30 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- Polyfill for GA -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+    
     <!-- Google Analytics -->
     <script>
         window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
         ga('create', 'UA-91081034-1', 'auto');
 
-        // Replace the following lines with the plugins you want to use.
         ga('require', 'eventTracker');
-        ga('require', 'outboundLinkTracker');
-        ga('require', 'urlChangeTracker');
-        // ...
+        
+        ga('require', 'impressionTracker', {
+            elements:
+            [
+                { id: 'page-top', trackFirstImpressionOnly: false }, { id: 'landing-page', trackFirstImpressionOnly: false }, { id: 'solution', threshold: 0.25, trackFirstImpressionOnly: false }, { id: 'organize', threshold: 0.25, trackFirstImpressionOnly: false }, { id: 'trust', threshold: 0.25, trackFirstImpressionOnly: false }, { id: 'engage', threshold: 0.25, trackFirstImpressionOnly: false }, { id: 'outreach', threshold: 0.25, trackFirstImpressionOnly: false }, { id: 'signup', threshold: 0.25, trackFirstImpressionOnly: false }
+            ]
+        });
+        
+        ga('require', 'pageVisibilityTracker', {
+            fieldsObj: {
+                nonInteraction: null
+            },
+            hiddenMetricIndex: 1,
+            visibleMetricIndex: 2,
+        });
 
         ga('send', 'pageview');
     </script>
@@ -68,22 +82,22 @@
             <div class="collapse navbar-collapse" id="navbar-collapsed">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#solution">Solution</a>
+                        <a ga-on="click" ga-event-category="Solution Nav" ga-event-action="click" class="page-scroll" href="#solution">Solution</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#organize">Organize</a>
+                        <a ga-on="click" ga-event-category="Organize Nav" ga-event-action="click" class="page-scroll" href="#organize">Organize</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#trust">Trust</a>
+                        <a ga-on="click" ga-event-category="Trust Nav" ga-event-action="click" class="page-scroll" href="#trust">Trust</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#engage">Engage</a>
+                        <a ga-on="click" ga-event-category="Engage Nav" ga-event-action="click" class="page-scroll" href="#engage">Engage</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#outreach">Outreach</a>
+                        <a ga-on="click" ga-event-category="Outreach Nav" ga-event-action="click" class="page-scroll" href="#outreach">Outreach</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#signup">Sign Up</a>
+                        <a ga-on="click" ga-event-category="Signup Nav" ga-event-action="click" class="page-scroll" href="#signup">Sign Up</a>
                     </li>
                 </ul>
             </div>
@@ -92,7 +106,7 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <header>
+    <header id="landing-page">
         <div class="header-content">
             <div class="header-content-inner">
                 <span class="rwd-line"><h1>Four Steps To Grow Your</h1></span>
@@ -106,7 +120,7 @@
                         <div class="col-sm-12 text-center">
                             <hr>
                             <div class="col-sm-3">
-                                <a href="#organize" class="page-scroll deco-none">
+                                <a ga-on="click" ga-event-category="Organize Head" ga-event-action="click" href="#organize" class="page-scroll deco-none">
                                     <span class="fa-stack fa-4x">
                                         <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
                                         <i class="fa fa-address-card-o fa-stack-1x icon-color"></i>
@@ -115,7 +129,7 @@
                                 </a>
                             </div>
                             <div class="col-sm-3">
-                                <a href="#trust" class="page-scroll deco-none">
+                                <a ga-on="click" ga-event-category="Trust Head" ga-event-action="click" href="#trust" class="page-scroll deco-none">
                                     <span class="fa-stack fa-4x">
                                         <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
                                         <i class="fa fa-group fa-stack-1x icon-color"></i>
@@ -124,7 +138,7 @@
                                 </a>
                             </div>
                             <div class="col-sm-3">
-                                <a href="#engage" class="page-scroll deco-none">
+                                <a ga-on="click" ga-event-category="Engage Head" ga-event-action="click" href="#engage" class="page-scroll deco-none">
                                     <span class="fa-stack fa-4x">
                                         <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
                                         <i class="fa fa-share fa-stack-1x icon-color"></i>
@@ -133,7 +147,7 @@
                                 </a>
                             </div>
                             <div class="col-sm-3">
-                                <a href="#outreach" class="page-scroll deco-none">
+                                <a ga-on="click" ga-event-category="Outreach Head" ga-event-action="click" href="#outreach" class="page-scroll deco-none">
                                     <span class="fa-stack fa-4x">
                                         <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
                                         <i class="fa fa-user-circle-o fa-stack-1x icon-color"></i>
@@ -145,7 +159,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#solution" class="btn btn-primary btn-xl page-scroll">Learn More</a>
+                <a ga-on="click" ga-event-category="More Button Head" ga-event-action="click" href="#solution" class="btn btn-primary btn-xl page-scroll">Learn More</a>
             </div>
         </div>
     </header>
@@ -175,7 +189,7 @@
                 <div class="col-md-6">
                     <ul>
                         <li>Workshops and support groups, if framed correctly, can have less stigma associated with them</li>
-                        <li>Many people -not only those who have a condition - can benefit from skills obtained in a workshop</li>
+                        <li>Many people - not only those who have a condition - can benefit from skills obtained in a workshop</li>
                         <li>Group therapy can actually be more effective for certain diagnoses</li>
                         <li>Group therapy can be a low-cost alternative for some patient segments</li>
                         <li>Program providers can potentially earn more per group session compared to an individual session</li>
@@ -207,7 +221,7 @@
             <div class="carousel-row">
                 <div class="col-xs-5 vertical-align text-right">
                     <h3>Create A Friendly Browsing Experience</h3>
-                    <p class="text-muted">Many sources for finding behavioral health services use complex psychological lingo. Assigning the appropriate lifestyle and topic tags make the browsing experience easy and understandable for a prospective patient in search of a fitting program.</p>
+                    <p class="text-muted">Assigning the appropriate lifestyle and topic tags make the browsing experience easy and understandable for a prospective patient in search of a fitting program.</p>
                 </div>
                 <div class="col-xs-7">
                     <img class="center-block img-responsive" src="img/browse.jpg" alt="organize-offering"/>
@@ -231,7 +245,7 @@
                 </div>
                 <div class="col-sm-5 vertical-align">
                     <h3>Show, Not Just Tell</h3>
-                    <p class="text-muted">Showing prospective clients the type of person you are and what your space looks builds your capability for trust. Your prior experiences help demonstrate your expertise, equipping your patients with the ability to make the right decisions.</p>
+                    <p class="text-muted">Show prospective clients the type of person you are and what your space looks like. Your prior experiences help demonstrate your expertise, equipping your patients with the ability to make the right decisions.</p>
                 </div>
           </div>
         </div>
@@ -268,36 +282,6 @@
                 
             </div>
         </div>
-<!--
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 text-center">
-                    <h2 class="section-heading">Engage <i class="fa fa-share"></i></h2>
-                    <p class="text-muted">It can be challenging to keep your patients, peer network, and partners up-to-date with recent developments. Our site integration and social sharing capabilities allow you to instantaneously publish group programs throughout various digital channels.</p>
-                    <hr class="primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 text-center">
-                    <img class="center-block img-responsive" src="img/activate.jpg" alt="powered-screenshot"/>
-                    <h3>Empower Your Site</h3>
-                    <p class="text-muted">Maintain the ability to use your own website and list your events via our API.</p>
-                </div>
-                <div class="col-sm-6 optimize-box">
-                <div class="text-center vertical-align">
-                    <div>
-                    <i class="fa fa-facebook-square fa-4x social-icon"></i>
-                    <i class="fa fa-linkedin-square fa-4x social-icon"></i>
-                    <i class="fa fa-twitter-square fa-4x social-icon"></i>
-                    <i class="fa fa-envelope-square fa-4x social-icon"></i>
-                        </div>
-                    <h3>Spread the News</h3>
-                    <p class="text-muted">Share blogs, programs, and resource recommendations seamlessly through Facebook, LinkedIn, Twitter, and email.</p>
-                </div>
-                </div>
-            </div>
-        </div>
--->
     </section>
     
     <section class="content-section-b" id="outreach">
@@ -338,7 +322,7 @@
     <aside class="bg-dark" id="signup">
         <div class="container text-center">            
             <div class="call-to-action">
-                <h2>Sign up to learn more!</h2>
+                <h2>Sign up to keep in touch!</h2>
 <!--                <a href="#page-top" class="btn btn-default btn-xl sr-button">Sign Up!</a>-->
                 
                 <!-- Begin MailChimp Signup Form -->
@@ -356,7 +340,7 @@
                 </div>
 -->
                 <!--End mc_embed_signup-->
-                <a class="btn btn-default btn-xl sr-button typeform-share" href="https://paalit.typeform.com/to/aBkJmD" data-mode="1" target="_blank">Sign Up!</a>
+                <a ga-on="click" ga-event-category="Signup CTA" ga-event-action="click" class="btn btn-default btn-xl sr-button typeform-share" href="https://paalit.typeform.com/to/aBkJmD" data-mode="1" target="_blank">Sign Up!</a>
                 <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
             </div>
         </div>
@@ -374,29 +358,17 @@
             <hr class="primary">
             <div class="row">
                 <div class="col-xs-4 col-xs-offset-2 text-center">
-                    <a href="https://www.linkedin.com/in/sandeepluke"><h5>Sandeep Luke</h5></a>
+                    <a ga-on="click" ga-event-category="Sandeep LI" ga-event-action="click" href="https://www.linkedin.com/in/sandeepluke"><h5>Sandeep Luke</h5></a>
                     <h6 class="text-muted">Co-Founder & CEO</h6>
-                    <a href="mailto:sandeep.luke@paalit.com"><i class="fa fa-envelope-o fa-2x sr-contact"></i></a>
+                    <a ga-on="click" ga-event-category="Sandeep Mail" ga-event-action="click" href="mailto:sandeep.luke@paalit.com"><i class="fa fa-envelope-o fa-2x sr-contact"></i></a>
                 </div>
 
                 <div class="col-xs-4 text-center">
-                    <a href="https://www.linkedin.com/in/nathan-fu-44752013"><h5>Nathan Fu</h5></a>
+                    <a ga-on="click" ga-event-category="Nathan LI" ga-event-action="click" href="https://www.linkedin.com/in/nathan-fu-44752013"><h5>Nathan Fu</h5></a>
                     <h6 class="text-muted">Co-Founder & CTO</h6>
-                    <a href="mailto:nathan.fu@paalit.com"><i class="fa fa-envelope-o fa-2x sr-contact"></i></a>
+                    <a ga-on="click" ga-event-category="Nathan Mail" ga-event-action="click" href="mailto:nathan.fu@paalit.com"><i class="fa fa-envelope-o fa-2x sr-contact"></i></a>
                 </div>
             </div>
-
-<!--
-            <hr>
-            <div class="container footer">
-                <h3>Why We Care</h3>
-                <div class="row">
-                    <div class="col-lg-6 col-lg-offset-3">
-                        <p>We are passionate about making mental health more accessible. A vast majority of people delay looking for, or even don’t seek, help due to the shackles of stigma associated with mental health. Engaging early can help mitigate the human and financial cost associated with delayed diagnosis.  Paalit is reimagining the process to make mental health expertise more accessible by reducing the barriers that keep people from seeking help sooner.</p>
-                    </div>
-                </div>
-            </div>
--->
         </div>
     </section>
     

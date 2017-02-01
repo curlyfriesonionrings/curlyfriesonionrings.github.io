@@ -7,5 +7,3 @@ Does NOT use gulp.js at this time.
 # TODO
 
 Use CDN for external scripts and fallback to local
-
-File names (.css .js) need to be changed

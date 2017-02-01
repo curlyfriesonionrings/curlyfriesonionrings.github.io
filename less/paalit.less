@@ -37,11 +37,13 @@ h3,
 h4,
 h5,
 h6 {
-    .sans-serif-font;
+//    .sans-serif-font;
+    font-family: 'exo_2';
 }
 
 p {
-    font-size: 16px;
+    font-family: 'exo_2';
+    font-size: 18px;
     line-height: 1.5;
     margin-bottom: 20px;
 }
@@ -63,10 +65,23 @@ p {
     color: @theme-primary;
 }
 
+@font-face {
+    font-family: exo_2;
+    src: url('../vendor/exo_2/fonts/Exo2-Medium.ttf')
+}
+
+@font-face {
+    font-family: traffolight;
+    src: url('../vendor/traffolight/fonts/traffolight.otf')
+}
+
 section {
     padding: 50px 0;
     padding-left: 50px;
     padding-right: 50px;
+    ul {
+        font-family: 'exo_2';
+    }
 }
 
 aside {
@@ -149,7 +164,7 @@ aside {
             border-color: @gray-light;
             .navbar-header .navbar-brand {
                 color: @theme-contrast;
-                font-size: 14px;
+//                font-size: 14px;
                 &:hover,
                 &:focus {
                     color: white;
@@ -184,6 +199,7 @@ header {
         width: 100%;
         .header-content-inner {
             h1 {
+                .sans-serif-font;
                 font-weight: 700;
                 text-transform: uppercase;
                 margin-top: 0;
@@ -223,6 +239,7 @@ header {
                 margin-left: auto;
                 margin-right: auto;
                 h1 {
+                    .sans-serif-font;
                     font-size: 50px;
                 }
                 p {
