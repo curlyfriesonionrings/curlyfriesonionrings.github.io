@@ -62,6 +62,30 @@
     });
     
     // Set up carousel
-    $('#carousel').carousel({wrap: true, interval: false});
+//    $('#carousel').carousel({wrap: true, interval: false});
+    
+    var message = "";
+        
+    $("#submitForm").on("click", function () {
+        var $contactForm = $('#contactForm');
+        message = $contactForm.serialize();
+        $.ajax({
+            url: "//formspree.io/contact@paalit.com",
+            method: "POST",
+            data: { message: message },
+            dataType: "json",
+            success: function (data) {
+                $contactForm.find('.alert-success').hide();
+                $contactForm.find('.alert-error').hide();
+                $contactForm.append('<div class="alert alert-success">Thanks for the email! We\'ll be in touch soon.</div>');
+            },
+            error: function (err) {
+                $contactForm.find('.alert-success').hide();
+                $contactForm.find('.alert-error').hide();
+                $contactForm.append('<div class="alert alert-error">Oops! There was a problem! Please try again later.</div>');
+            }
+        });
+        return false;
+    });
     
 })(jQuery); // End of use strict

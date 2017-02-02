@@ -25,6 +25,9 @@
     <!-- Theme CSS -->
     <link href="css/paalit.min.css" rel="stylesheet">
 
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    
     <!-- MailChimp Form Embed -->
 <!--    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">-->
     
@@ -361,11 +364,81 @@
                 </div>
 -->
                 <!--End mc_embed_signup-->
+                
+                <!-- Begin TypeForm embed -->
+<!--
                 <a ga-on="click" ga-event-category="Signup CTA" ga-event-action="click" class="btn btn-default btn-xl sr-button typeform-share" href="https://paalit.typeform.com/to/aBkJmD" data-mode="1" target="_blank">Contact Us</a>
                 <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
+-->
+                <!-- End TypeForm embed -->
+                
+                <!-- Button trigger modal -->
+                <button ga-on="click" ga-event-category="Signup CTA" ga-event-action="click" type="button" class="btn btn-default btn-xl sr-button" data-toggle="modal" data-target="#modalWindow">Contact Us</button>
             </div>
         </div>
     </aside>
+    
+    <!-- Modal -->
+<div class="modal fade" id="modalWindow" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabel">Submission Form</h4>
+            </div>
+            <div class="modal-body">
+                <form id="contactForm" method="post">
+                    <div class="form-group">
+                        <div class="form-line-entry">
+                            <label for="name"><i class="fa fa-user form-icon"></i>Your Name</label>
+                            <input name="form-name-input" type="text" name="name" class="form-control" placeholder="Your name">
+                        </div>
+                        <div class="form-line-entry">
+                            <label for="email"><i class="fa fa-envelope form-icon"></i>Your E-mail Address*</label>
+                            <input name="form-email-input" type="email" name="email" class="form-control" placeholder="Your email" required>
+                        </div>
+
+                        <input type="text" name="_gotcha" style="display:none" />
+
+                        <div class="form-line-entry">
+                            <label for="message"><i class="fa fa-comment form-icon"></i>Message</label>
+                            <textarea class="form-control" cols="40" rows="8" name="message" style="resize:none;" placeholder="Feel free to add a nice message here"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button id="submitForm" type="submit" class="btn btn-primary"><i class="fa fa-paper-plane form-icon"></i> Send </button>
+                        </div>
+                    </div>
+                </form>
+<!--
+                <form id="contactForm" action="http://mailthis.to/paalit-contact" method="post">
+                    <div class="form-group">
+                        <input type="hidden" name="_valid[email]" value="required|valid_email">
+                        <div class="form-line-entry">
+                            <label for="name"><i class="fa fa-user form-icon"></i>Your Name</label>
+                            <input class="form-control" type="text" name="name" placeholder="Your name" />
+                        </div>
+                        <div class="form-line-entry">
+                            <label for="email"><i class="fa fa-envelope form-icon"></i>Your E-mail Address*</label>
+                            <input class="form-control" type="email" name="email" placeholder="Your email" required>
+                        </div>
+
+                        <input type="text" name="_honey" value="" style="display:none">
+
+                        <div class="form-line-entry">
+                            <label for="message"><i class="fa fa-comment form-icon"></i>Message</label>
+                            <textarea class="form-control" cols="40" rows="8" name="message" style="resize:none;" placeholder="Feel free to add a nice message here"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="submitForm" type="submit" class="btn btn-primary"><i class="fa fa-paper-plane form-icon"></i> Send </button>
+                        </div>
+                    </div>
+                </form>
+-->
+            </div>
+        </div>
+    </div>
+</div>
     
     <section>
         <div class="container">
@@ -390,9 +463,6 @@
             </div>
         </div>
     </section>
-    
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -404,6 +474,7 @@
 
     <!-- Theme JavaScript -->
     <script src="js/paalit.min.js"></script>
+<!--    <script src="js/paalit.js"></script>-->
 
 </body>
 
